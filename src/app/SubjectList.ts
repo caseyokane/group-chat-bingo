@@ -1,0 +1,20 @@
+export const SubjectList: string[] = [
+    'Complaining About Jacob',
+    'Mark Zuckerburg 9000',
+    'Trisha',
+    'King Cobra JSF',
+    'Casey\\\'s O\\\'Kane Sass',
+    'Emily\\\'s work problems',
+    'Cat Adoptions',
+    'Cat Baby Talking',
+    'Rose\\\'s Teacher Problems',
+    'Ricky Two Chains',
+    'Bobby Two Wines',
+    'Annoying Co-Workers',
+    'Lack of Coffee',
+    'ENTP',
+    'SHE-RA GIF',
+    'Birbs',
+    'Car Fire',
+    ''
+  ];
