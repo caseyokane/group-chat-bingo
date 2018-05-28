@@ -29,6 +29,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 * Include button to randomize selections
 * Move from 'BINGO' to 'CHAT' to make games go faster
 * Timer for games so that they end after a week
+* Synchronous interaction between concurrent users 
 
 ## Further help
 
