@@ -24,6 +24,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ## TODO
 
+* Fix mobile view
 * Implement winning logic 
 * Continue to improve styling 
 * Include button to randomize selections

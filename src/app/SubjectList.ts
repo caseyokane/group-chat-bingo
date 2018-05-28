@@ -8,7 +8,7 @@ export const SUBJECTS: Subject[] = [
 { id: 5, name: 'King Cobra JSF', selected: false },
 { id: 6, name: 'Casey\'s O\'Kane Sass', selected: false },
 { id: 7, name: 'Emily\'s work problems', selected: false },
-{ id: 8, name: 'Cat Adoptions', selected: false },
+{ id: 8, name: 'Emily complaining about Casey\'s work', selected: false },
 { id: 9, name: 'Cat Baby Talking', selected: false },
 { id: 10, name: 'Rose\'s Teacher Problems', selected: false },
 { id: 11, name: 'Ricky Two Chains', selected: false },
