@@ -12,11 +12,29 @@ export class BingoBoardComponent implements OnInit {
 
   isSelected: Boolean = false;
   subjects: Subject[];
-
-  constructor(private bingoBoardService: BingoBoardService) { }
-
+  rows: number;
+  columns: number;
+  constructor(private bingoBoardService: BingoBoardService) {
+    this.rows = 5;
+    this.columns = 5;
+   }
   ngOnInit() {
     this.getSubjects();
+    this.setRowsAndColumns();
+  }
+  // Set Rows and Columns to Identity win Scenarios
+  setRowsAndColumns(): void {
+    const count = this.subjects.length;
+    let place = 0;
+    // Set Rows
+    for (let row = 1; row < this.rows; row++) {
+      // Set Columns
+      for (let column = 1; column < this.columns; column++) {
+        this.subjects[place].row = row;
+        this.subjects[place].col = column;
+        place++;
+      }
+    }
   }
 
   getSubjects(): void {
