@@ -14,6 +14,12 @@ export class BingoBoardComponent implements OnInit {
   subjects: Subject[];
   rows: number;
   columns: number;
+  winScenario1 = [
+    1, 7, 13, 19, 25
+  ];
+  winScenario2 = [
+    5, 9, 13, 17, 21
+  ];
   constructor(private bingoBoardService: BingoBoardService, public dialog?: MatDialog) {
     this.rows = 5;
     this.columns = 5;
@@ -63,8 +69,16 @@ export class BingoBoardComponent implements OnInit {
     }
     return false;
   }
-  diagonalWin(): void {
-    // Do this Later
+  diagonalWin(winScenario: number[]): boolean {
+    for (let i = 0; i < 5; i++) {
+      const sub = this.subjects.filter(subject => {
+        return subject.id === winScenario[i];
+      });
+      if(sub[0].selected !== true) {
+        return false;
+      }
+    }
+    return true;
   }
   resetGame(): void {
     this.subjects = this.subjects.map(subject => {
@@ -75,7 +89,9 @@ export class BingoBoardComponent implements OnInit {
   checkWin() {
     const rowWin = this.rowWin();
     const columnWin = this.columnWin();
-    if (rowWin || columnWin) {
+    const diagonal1 = this.diagonalWin(this.winScenario1);
+    const diagonal2 = this.diagonalWin(this.winScenario2);
+    if (rowWin || columnWin || diagonal1 || diagonal2) {
       this.openWinDialog();
     }
   }
