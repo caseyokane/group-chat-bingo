@@ -63,6 +63,9 @@ export class BingoBoardComponent implements OnInit {
     }
     return false;
   }
+  diagonalWin(): void {
+    // Do this Later
+  }
   resetGame(): void {
     this.subjects = this.subjects.map(subject => {
       subject.selected = false;
